@@ -1,9 +1,9 @@
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_training/theme/theme_provider.dart';
+import 'package:flutter_training/provider/theme_provider.dart';
 
-class ChangeThemeButtonWidget extends StatelessWidget {
-  const ChangeThemeButtonWidget({Key? key}) : super(key: key);
+class ChangeThemeButton extends StatelessWidget {
+  const ChangeThemeButton({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

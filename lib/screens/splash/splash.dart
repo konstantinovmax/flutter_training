@@ -1,32 +1,19 @@
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_training/theme/colors.dart';
+import 'package:flutter_training/screens/home/home.dart';
+import 'package:flutter_training/constants/strings.dart';
 
-class Splash extends StatefulWidget {
+class Splash extends StatelessWidget {
   const Splash({Key? key}) : super(key: key);
 
   @override
-  State<Splash> createState() => _SplashState();
-}
-
-class _SplashState extends State<Splash> {
-  @override
-  void initState() {
-    _navToLogin();
-    super.initState();
-  }
-
-  void _navToLogin() async {
-    await Future.delayed(const Duration(milliseconds: 2000), () {});
-    Navigator.of(context).popAndPushNamed('/login');
-  }
-
-  @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: blueColor1,
-      body: Center(
-        child: Image(image: AssetImage('assets/images/mainLogo.png')),
-      ),
+    return AnimatedSplashScreen(
+      splash: Images.splashLogo,
+      splashTransition: SplashTransition.scaleTransition,
+      animationDuration: const Duration(milliseconds: 500),
+      duration: 500,
+      nextScreen: const Home(),
     );
   }
 }
