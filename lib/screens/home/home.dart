@@ -47,14 +47,37 @@ class Home extends StatelessWidget {
         ],
       ),
       body: Center(
-        child: Text(
-          mainText,
-          style: const TextStyle(
-            fontFamily: 'Roboto',
-            fontWeight: FontWeight.w700,
-            fontSize: 22,
-            height: 1.2,
-          ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              mainText,
+              style: const TextStyle(
+                fontFamily: 'Roboto',
+                fontWeight: FontWeight.w700,
+                fontSize: 22,
+                height: 1.2,
+              ),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            Provider.of<ThemeProvider>(context).themeMode == ThemeMode.light
+                ? IconButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, Routes.lightSideRoute);
+                    },
+                    icon: Image.asset(Images.lightSide),
+                    iconSize: 80,
+                  )
+                : IconButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, Routes.darkSideRoute);
+                    },
+                    icon: Image.asset(Images.darkSide),
+                    iconSize: 80,
+                  ),
+          ],
         ),
       ),
     );
