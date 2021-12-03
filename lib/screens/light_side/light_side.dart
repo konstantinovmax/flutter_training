@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_training/constants/strings.dart';
 import 'package:flutter_training/models/persons_model.dart';
+import 'package:flutter_training/theme/styles.dart';
 
 class LightSide extends StatefulWidget {
   const LightSide({Key? key}) : super(key: key);
@@ -22,10 +23,10 @@ class _LightSideState extends State<LightSide> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const BackButton(color: Colors.black),
-        title: const Text(
+        leading: BackButton(color: Theme.of(context).primaryColor),
+        title: Text(
           Texts.onLightSide,
-          style: TextStyle(color: Colors.black),
+          style: TextStyle(color: Theme.of(context).primaryColor),
         ),
         centerTitle: true,
         backgroundColor: Colors.transparent,
@@ -42,64 +43,45 @@ class _LightSideState extends State<LightSide> {
                 children: [
                   Text(
                     snapshot.data!.results[0].name,
-                    style: const TextStyle(
-                      fontFamily: 'Roboto',
-                      fontSize: 20,
-                      fontWeight: FontWeight.w700,
-                    ),
+                    style: TextStyles.sideTitle,
                   ),
                   const SizedBox(height: 20),
                   Text(
                     'Gender: ${snapshot.data!.results[0].gender}',
-                    style: const TextStyle(
-                      fontFamily: 'Roboto',
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                    ),
+                    style: TextStyles.sideText,
                   ),
                   const SizedBox(height: 10),
                   Text(
                     'Birth year: ${snapshot.data!.results[0].birth_year}',
-                    style: const TextStyle(
-                      fontFamily: 'Roboto',
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                    ),
+                    style: TextStyles.sideText,
                   ),
                   const SizedBox(height: 10),
                   Text(
                     'Height: ${snapshot.data!.results[0].height}',
-                    style: const TextStyle(
-                      fontFamily: 'Roboto',
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                    ),
+                    style: TextStyles.sideText,
                   ),
                   const SizedBox(height: 10),
                   Text(
                     'Weight: ${snapshot.data!.results[0].mass}',
-                    style: const TextStyle(
-                      fontFamily: 'Roboto',
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                    ),
+                    style: TextStyles.sideText,
                   ),
                   const SizedBox(height: 10),
                   Text(
                     'Eye color: ${snapshot.data!.results[0].eye_color}',
-                    style: const TextStyle(
-                      fontFamily: 'Roboto',
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                    ),
+                    style: TextStyles.sideText,
                   ),
                 ],
               ),
             );
           } else if (snapshot.hasError) {
-            return const Text('Error');
+            return const Text(Texts.error);
           }
-          return const Center(child: CircularProgressIndicator());
+          return Center(
+            child: CircularProgressIndicator(
+              valueColor:
+                  AlwaysStoppedAnimation<Color>(Theme.of(context).primaryColor),
+            ),
+          );
         },
       ),
     );

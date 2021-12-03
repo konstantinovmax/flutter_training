@@ -17,4 +17,5 @@ abstract class Texts {
   static const String darkSide = 'Тёмная сторона';
   static const String onLightSide = 'Вы на светлой стороне';
   static const String onDarkSide = 'Вы на тёмной стороне';
+  static const String error = 'Ошибка';
 }

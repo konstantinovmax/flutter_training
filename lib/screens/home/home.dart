@@ -3,6 +3,7 @@ import 'package:flutter_training/provider/theme_provider.dart';
 import 'package:flutter_training/screens/home/widgets/change_theme_button_widget.dart';
 import 'package:flutter_training/constants/strings.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_training/theme/styles.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -52,12 +53,7 @@ class Home extends StatelessWidget {
           children: [
             Text(
               mainText,
-              style: const TextStyle(
-                fontFamily: 'Roboto',
-                fontWeight: FontWeight.w700,
-                fontSize: 22,
-                height: 1.2,
-              ),
+              style: TextStyles.homeTitle,
             ),
             const SizedBox(
               height: 30,
