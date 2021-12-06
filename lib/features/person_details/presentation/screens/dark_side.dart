@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_training/common/strings.dart';
-import 'package:flutter_training/common/styles.dart';
+import 'package:flutter_training/common/theme/styles.dart';
 import 'package:flutter_training/features/person_details/data/models/persons_model.dart';
 
 class DarkSide extends StatefulWidget {

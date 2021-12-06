@@ -3,7 +3,7 @@ import 'package:flutter_training/common/strings.dart';
 import 'package:flutter_training/features/switch_theme/presentation/widgets/change_theme_button_widget.dart';
 import 'package:flutter_training/features/switch_theme/provider/theme_provider.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter_training/common/styles.dart';
+import 'package:flutter_training/common/theme/styles.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
