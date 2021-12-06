@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_training/constants/strings.dart';
-import 'package:flutter_training/models/persons_model.dart';
-import 'package:flutter_training/theme/styles.dart';
+import 'package:flutter_training/common/strings.dart';
+import 'package:flutter_training/common/styles.dart';
+import 'package:flutter_training/features/person_details/data/models/persons_model.dart';
 
 class LightSide extends StatefulWidget {
   const LightSide({Key? key}) : super(key: key);

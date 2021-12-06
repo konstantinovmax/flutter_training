@@ -1,7 +1,7 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_training/screens/home/home.dart';
-import 'package:flutter_training/constants/strings.dart';
+import 'package:flutter_training/common/strings.dart';
+import 'package:flutter_training/features/switch_theme/presentation/screens/home.dart';
 
 class Splash extends StatelessWidget {
   const Splash({Key? key}) : super(key: key);

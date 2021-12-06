@@ -1,8 +1,8 @@
-import 'package:flutter_training/screens/dark_side/dark_side.dart';
-import 'package:flutter_training/screens/home/home.dart';
-import 'package:flutter_training/screens/light_side/light_side.dart';
-import 'package:flutter_training/screens/splash/splash.dart';
-import 'package:flutter_training/constants/strings.dart';
+import 'package:flutter_training/common/strings.dart';
+import 'package:flutter_training/features/switch_theme/presentation/screens/home.dart';
+import 'package:flutter_training/features/person_details/presentation/screens/dark_side.dart';
+import 'package:flutter_training/features/person_details/presentation/screens/light_side.dart';
+import 'package:flutter_training/features/splash/presentation/screens/splash.dart';
 
 routes() => {
       Routes.splashRoute: (context) => const Splash(),

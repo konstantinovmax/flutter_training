@@ -1,6 +1,6 @@
+import 'package:flutter_training/features/switch_theme/provider/theme_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_training/provider/theme_provider.dart';
 
 class ChangeThemeButton extends StatelessWidget {
   const ChangeThemeButton({Key? key}) : super(key: key);

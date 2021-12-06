@@ -40,6 +40,7 @@ dependencies:
   build_runner: ^2.1.5
   http: ^0.13.4
   surf_lint_rules: ^1.4.1
+  bloc: ^8.0.1
 
 dev_dependencies:
   flutter_test:

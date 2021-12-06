@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_training/app/routes.dart';
-import 'package:flutter_training/provider/theme_provider.dart';
-import 'package:flutter_training/constants/strings.dart';
+import 'package:flutter_training/common/strings.dart';
+import 'package:flutter_training/features/switch_theme/provider/theme_provider.dart';
 import 'package:provider/provider.dart';
 
 class App extends StatelessWidget {
